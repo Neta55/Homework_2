@@ -1,39 +1,47 @@
-body {
-    font-family: sans-serif;
-  }
+body {font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  margin: 5px}
 
 h1 {
     font-size: 50px;
-   
+   font-weight: 100;
     color: white;
 }
 h2 {
   color: rgb(50, 20, 5);
+  font-weight: 100;
+  font-size: 40px;
 }
+h3 {color: rgb(50, 20, 5);}
+
 .balti-burti-lieli {
-  color: white;
-  font-size: 1.3em;
-  font-family: serif;
-  font-weight: lighter;
-  
+  color: linen;
+  font-size: 1.2em;
+  font-weight: 100;
+  line-height: 1.30;
 }
+
+.left-align { text-align: left;}
+.balts-teksts {color: linen;}
+.larger-text {font-size: 1.4rem;}
+
 .header-container {
     width: 100%;
-   height: fit-content;
     display: grid;
     grid-gap: 5px;
-    padding: 5px;
+    /* padding: 5px; */
+    align-items: flex-end;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
     "brand  brand"
     "global tools";
-    background-color: rgb(50, 20, 5);
+    background-color: linen;
 }
 
 .menu {
-   font-size: 15px;
-   background-color: white;
+  
+   background-color: linen;
    text-align: center;
+   /* height: auto; */
 }
 
 .h-menu1 {grid-area: brand;}
@@ -56,25 +64,22 @@ h2 {
 }
 .m-menu1 {grid-area: hero-f; display: none; background-color: rgb(50, 20, 5);}
 .m-menu2 {grid-area: hero-c; background-color:  rgb(50, 20, 5); padding: 0 1em 0 1em;}
-.m-menu3 {grid-area: reklame; background-color: white}
+.m-menu3 {grid-area: reklame; background-color: white;}
 .m-menu4 {grid-area: article-f; padding: 1em;}
 .m-menu5 {grid-area: article-l; padding: 1em;}
-.m-menu6 {grid-area: sidebar; display: none;}
-
-
+.m-menu6 {grid-area: sidebar; display: none; padding: 1em; background-color: rgb(50, 20, 5);}
 
 
 @media (min-width: 576px){
     .header-container {
       
       grid-template-columns: 1fr 4fr 1fr;
-      grid-template-areas:
-        "brand global tools";
+      grid-template-areas: "brand global tools";
     }
     .main-container {
         
-          grid-template-columns: 1fr 1fr 1fr 1fr;
-          grid-template-rows: auto auto auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
         grid-template-areas:
           "hero-f hero-f hero-f hero-f"
           "hero-c hero-c hero-c hero-c"
@@ -84,46 +89,81 @@ h2 {
       }
       .m-menu1 {display: block;}
       .m-menu6 {display: block;}
+      
     }
 
 @media (min-width: 992px){
     .header-container {
       
-        grid-template-columns: 2fr 7fr 3fr;
-      grid-template-areas:
-        "brand global tools";
+      grid-template-columns: 2fr 7fr 3fr;
+      grid-template-areas: "brand global tools";
     }
     .main-container {
-        
-          grid-template-columns: 1fr 1fr 1fr 1fr;
-          grid-template-rows: auto auto;
-        grid-template-areas:
-          "hero-f hero-f hero-c reklame"
-          "article-f article-l article-l sidebar";
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+      "hero-f hero-f hero-c reklame"
+      "article-f article-l article-l sidebar";
       }
       .m-menu1 {display: block;}
       .m-menu6 {display: block;}
+      li a {font-size: 1.2em;}
     }
 .footer {
-  background-color: rgb(50, 20, 5);
+  background-color: linen;
     width: 100%;
     display: grid;
     padding: 5px;
     text-align: center;
+    color: rgb(50, 20, 5);
 }
 .puslaukums {
-margin: auto;
   width: 50%; 
   z-index: 100;     
 }
 .logo {
-  width: 50%; 
+  height: 100%;
   z-index: 100;     
 }
 .pilns-laukums {
   width: 100%; 
   z-index: 100;     
 }
-hr {
-color: rgb(50, 20, 5);
+
+
+/* nav ikonu rinda */
+ul {
+  list-style-type: none;
+  margin: 1em;
+  padding: 0;
+  align-items: baseline;
+  overflow: hidden;
+  background-color: linen  ;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color:rgb(50, 20, 5);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color:rgb(50, 20, 5);
+  color: linen;
+}
+
+
+/* nav ikonu rindas beigas */
+
+
+
+
+.margin1em {
+  margin: 2em;
 }
