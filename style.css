@@ -113,10 +113,17 @@ h3 {color: rgb(50, 20, 5);}
   background-color: linen;
     width: 100%;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "autors adrese validators";
     padding: 5px;
-    text-align: center;
+    align-items: center;
     color: rgb(50, 20, 5);
 }
+    .foot1 {grid-area: autors; text-align: left;}
+    .foot2 {grid-area: adrese; text-align: center;}
+    .foot3 {grid-area: validators; text-align: right;}
+
 .puslaukums {
   width: 50%; 
   z-index: 100;     
