@@ -4,7 +4,7 @@ body {font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 h1 {
     font-size: 50px;
    font-weight: 100;
-    color: white;
+   color: rgb(50, 20, 5);
 }
 h2 {
   color: rgb(50, 20, 5);
@@ -15,9 +15,9 @@ h3 {color: rgb(50, 20, 5);}
 
 .balti-burti-lieli {
   color: linen;
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
   font-weight: 100;
-  line-height: 1.30;
+  /* line-height: 1.30; */
 }
 
 .left-align { text-align: left;}
@@ -28,7 +28,7 @@ h3 {color: rgb(50, 20, 5);}
     width: 100%;
     display: grid;
     grid-gap: 5px;
-    /* padding: 5px; */
+    padding: 5px;
     align-items: flex-end;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
@@ -41,7 +41,7 @@ h3 {color: rgb(50, 20, 5);}
   
    background-color: linen;
    text-align: center;
-   /* height: auto; */
+  
 }
 
 .h-menu1 {grid-area: brand;}
@@ -62,9 +62,9 @@ h3 {color: rgb(50, 20, 5);}
     "article-l";
     background-color: rgb(50, 20, 5);
 }
-.m-menu1 {grid-area: hero-f; display: none; background-color: rgb(50, 20, 5);}
-.m-menu2 {grid-area: hero-c; background-color:  rgb(50, 20, 5); padding: 0 1em 0 1em;}
-.m-menu3 {grid-area: reklame; background-color: white;}
+.m-menu1 {grid-area: hero-f; display: none; background-color: rgb(50, 20, 5); }
+.m-menu2 {grid-area: hero-c; background-color:  rgb(50, 20, 5); padding: 0 1em;  align-self: center;}
+.m-menu3 {grid-area: reklame; background-color: white; }
 .m-menu4 {grid-area: article-f; padding: 1em;}
 .m-menu5 {grid-area: article-l; padding: 1em;}
 .m-menu6 {grid-area: sidebar; display: none; padding: 1em; background-color: rgb(50, 20, 5);}
@@ -100,7 +100,7 @@ h3 {color: rgb(50, 20, 5);}
     }
     .main-container {
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: auto auto;
+      grid-template-rows: 300px auto;
       grid-template-areas:
       "hero-f hero-f hero-c reklame"
       "article-f article-l article-l sidebar";
